@@ -1,0 +1,18 @@
+{
+  "Roots": {
+    "Expense1": {
+      "rootsTitle": "Shopping",
+      "rootsPrice": "500php"
+    },
+
+    "Expense2": {
+      "rootsTitle": "School",
+      "rootsPrice": "200php"
+    },
+
+    "Expense3": {
+      "rootsTitle": "Food",
+      "rootsPrice": "100php"
+    }
+  }
+}

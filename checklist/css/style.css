@@ -1,0 +1,31 @@
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+input[type="checkbox"] {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border: 1px solid #34495e;
+  outline: none;
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  height: 15px;
+  width: 40%;
+  border: 2px solid black;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

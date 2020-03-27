@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/sass/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="box-shadow">
+      <div class="box"></div>
+    </div>
+
+    <div class="sidebar">
+      <h2>A Visual editor for border Radius</h2>
+      <label>Top Left Radius (px)</label>
+      <input type="text" id="topLeft" name="tLeft" placeholder="input a value" value="3">
+      <label>Top Right Radius (px)</label>
+      <input type="text" id="topRight" name="tRight" placeholder="input a value" value="4">
+      <label>Bottom Left Radius (px)</label>
+      <input type="text" id="bottomLeft" name="bLeft" placeholder="input a value" value="5">
+      <label>Bottom Right (px)</label>
+      <input type="text" id="bottomRight" name="bRight" placeholder="input a value" value="6">
+
+      <textarea readonly id="code" cols="50" rows="10"></textarea>
+
+      <button>Copy to Clipboard</button>
+
+    </div>
+  </div>
+
+
+  <div class="modal">
+
+  </div>
+  <script src="src/app.js"></script>
+</body>
+
+</html>

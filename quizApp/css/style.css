@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary: #6246ea;
+  --secondary: #d1d1e9;
+  --tertiary: #e45858;
+  --color-text: #2b2c34;
+  --background: #dfe4ea;
+  --background-1: #fffffe;
+  --green: #77dd77;
+  --red: #ff6961;
+  --yellow: #ffcc00;
+  --light-gray: #d9dde8;
+  --gray: #e8eaf1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-text);
+  background: var(--background);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.question {
+  width: 500px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .question {
+    width: 300px;
+  }
+}
+
+.question__panel, .question__container {
+  border-radius: 10px;
+}
+
+.question__panel {
+  width: 100%;
+  height: 10rem;
+  background: var(--background-1);
+  margin-bottom: 1.5rem;
+}
+
+.question__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: left;
+  padding: 2rem;
+}
+
+.question__container {
+  background: var(--background-1);
+}
+
+.question__progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.question__bar {
+  width: 80%;
+  height: 2rem;
+}
+
+.question__btn {
+  border: none;
+  text-align: left;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  background: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0.5rem 1rem var(--secondary);
+          box-shadow: 0 0.5rem 1rem var(--secondary);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.question__btn:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.question__btn:hover {
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+}
+
+.question__title {
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 0;
+}
+
+.question p {
+  color: var(--color-text);
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.heading--2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 2rem;
+  background: var(--yellow);
+  color: #fff;
+}
+
+.heading--1 {
+  font-size: 3rem;
+}
+
+.heading--5 {
+  font-size: 1.8rem;
+  color: var(--light-gray);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.front {
+  margin: 0 auto;
+  width: 50%;
+  padding: 10rem 5rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .front {
+    padding: 15rem 5rem;
+    width: 80%;
+  }
+}
+
+.start-btn {
+  background: #2fda76;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 50%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 20px;
+}
+
+.correct {
+  color: #fff;
+  background: var(--green);
+}
+
+.wrong {
+  color: #fff;
+  background: var(--red);
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  background: var(--primary);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1rem 2.9rem;
+}
+/*# sourceMappingURL=style.css.map */

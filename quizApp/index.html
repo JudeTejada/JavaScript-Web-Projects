@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ APP</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="question hide">
+      <div class="question__panel">
+        <h1 class="question__title">Prove how much you know about me </h1>
+        <div class="question__progress">
+          <p>
+            <span id="currNum">1</span>
+            /
+            <span id="maxNum">10</span>
+          </p>
+          <progress class="question__bar" max="100" value="0" id="progressBar"></progress>
+        </div>
+      </div>
+
+
+      <div class="question__container">
+        <div class="heading--2" id="questionTitle">Question 1</div>
+        <div class="question__buttons" id="answerButtons">
+          <button class="question__btn btn">Answer 1</button>
+          <button class="question__btn btn">Answer 2</button>
+          <button class="question__btn btn">Answer 3</button>
+          <button class="question__btn btn">Answer 4</button>
+
+        </div>
+        <button id="nextBtn" class="btn">Next</button>
+        <p class="heading--5">Choose below which is the correct Answer!</p>
+      </div>
+      <!--END OF FIRST QUESTION-->
+    </div>
+
+
+    <div class="front" id="frontPage">
+      <h1 class="heading--1">Prove how much you know about me 🤔</h1>
+      <button class="start-btn" id="startBtn">Get Started</button>
+    </div>
+
+
+  </div>
+
+  <!--CONTAINER-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

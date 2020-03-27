@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To-do List</title>
+  <link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <div class="main nes-container  with-title is-dark">
+
+    <h1 class="title">TODO LIST</h1>
+
+    <form action="#" class="form">
+      <div class="nes-field is-inline">
+        <input type="text" class="nes-input" placeholder="New task">
+        <button class="nes-btn" type="submit">Add task</button>
+      </div>
+    </form>
+    <br>
+
+
+
+    <div class="tasksBoard nes-container with-title is-dark">
+      <h1 class="title">Tasks</h1>
+      <ul>
+        <!-- LEAVE EMPTY -->
+      </ul>
+    </div>
+    <br>
+    <button class="nes-btn is-error" id="clear">CLEAR</button>
+  </div>
+
+<!-- MODAL-->
+<section>
+    <dialog class="nes-dialog  is-dark is-rounded" id="dialog-dark-rounded">
+      <form method="dialog">
+        <p class="title">Warning</p>
+        <p>Please enter a task</p>
+        <menu class="dialog-menu">
+
+          <button class="nes-btn is-warning">Retry</button>
+        </menu>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="message -right">
+    <!-- Balloon -->
+    <div class="nes-balloon from-right">
+      <p>Grow stronger by doing productive task to defeat the evil!</p>
+    </div>
+    <i class="nes-bcrikko"></i>
+  </section>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

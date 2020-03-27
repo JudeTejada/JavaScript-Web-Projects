@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #191919;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+
+  align-items: center;
+  text-align: center;
+}
+
+li {
+  padding: 2rem 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 200;
+}
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.date {
+  padding: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 30%;
+  padding: 1rem;
+}
+input:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+button {
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 0.8rem 6rem;
+  background: transparent;
+  border: 3px solid #fff;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+button:active,
+button:hover {
+  background: #fff;
+  color: #333;
+}
+.countdown {
+  background: #313131;
+  padding: 3rem 5rem;
+}
+.dateNumber {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.dateDetail {
+  display: inline-block;
+  padding-top: 1.2rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.wrapper {
+  margin: 0 auto;
+}

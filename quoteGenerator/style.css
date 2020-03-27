@@ -1,0 +1,36 @@
+.content{
+  width:100%;
+  max-width:1300px;
+  background:#eeeeee;
+  text-align: center;
+  position: absolute;
+  top:100px;
+
+  }
+
+.quote{
+  margin: 20px 0 0 0;
+  font-size:18px;
+}
+.author{
+  font-weight:600;
+  margin-top:18px;
+
+}
+
+h2{
+  margin-top:50px;
+}
+button{
+  margin-bottom:30px;
+}
+.share{
+  text-decoration: none;
+  padding:10px 30px;
+  border:1px solid #333;
+  display:none;
+}
+.fab{
+  color:inherit;
+  margin-right:10px;
+}

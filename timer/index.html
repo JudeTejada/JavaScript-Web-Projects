@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <div class="date">
+      <h1>Countdown Timer</h1>
+      <form>
+        <input type="text" id="eventName" placeholder="Enter a event title">
+        <input type="date" id="eventDate">
+        <button>Submit</button>
+      </form>
+    </div>
+
+
+
+    <div class="countdown">
+      <h2 id="eventTitle"></h2>
+      <ul id="result">
+        <li>
+          <span id="days" class="dateNumber"></span>
+          <br>
+          <span class="dateDetail">days</span>
+        </li>
+
+        <li>
+          <span id="hours" class="dateNumber"></span>
+          <br>
+          <span class="dateDetail">Hours</span>
+        </li>
+
+        <li>
+          <span id="minutes" class="dateNumber"></span>
+          <br>
+          <span class="dateDetail">Minutes</span>
+        </li>
+
+        <li>
+          <span id="seconds" class="dateNumber"></span>
+          <br>
+          <span class="dateDetail">Seconds</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  font-size: 2rem;
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.7fr max-content;
+      grid-template-columns: 2.7fr -webkit-max-content;
+      grid-template-columns: 2.7fr max-content;
+  height: 100vh;
+}
+
+.box-shadow {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #100e17;
+}
+
+.box-shadow .box {
+  width: 20rem;
+  height: 20rem;
+  background-color: pink;
+  border-top-left-radius: calc(var(--tLeft, 3) * 1px);
+  border-top-right-radius: calc(var(--tRight, 4) * 1px);
+  border-bottom-left-radius: calc(var(--bLeft, 5) * 1px);
+  border-bottom-right-radius: calc(var(--bRight, 6) * 1px);
+}
+
+.sidebar {
+  background: #303c44;
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 5rem;
+}
+
+.sidebar input {
+  display: block;
+  padding: 0.7rem 2rem;
+  font-family: inherit;
+}
+
+.sidebar input:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar textarea {
+  background: #222;
+  color: #fff;
+  margin-top: 2.5rem;
+}
+
+.sidebar label {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #cccccc;
+  margin-bottom: 1.3rem;
+}
+
+.sidebar button {
+  border: none;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
+  padding: 1rem;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.sidebar button:active, .sidebar button:focus {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: -3rem;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: -3rem;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
