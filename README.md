@@ -3,8 +3,8 @@
 
 | Website          | Original                                | 
 | --------         |----------                               |
-| Box Shadow       | [live](https://angry-raman-b3b00b.netlify.com)  | 
-| Checklist | [live](https://suspicious-hoover-6de470.netlify.com)  | 
+| Box Shadow Editor       | [live](https://angry-raman-b3b00b.netlify.com)  | 
+| Simple Checklist | [live](https://suspicious-hoover-6de470.netlify.com)  | 
 | Currency Converter | [live](https://pensive-kepler-210065.netlify.com)  | 
 | Meal Generator  | [live](https://eloquent-thompson-828da0.netlify.com)  | 
 | Quiz | [live](https://cranky-edison-bc91ed.netlify.com/)  | 
