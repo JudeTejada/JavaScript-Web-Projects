@@ -1,7 +1,7 @@
 ## JavaScript-Web-Projects
 
 
-| Website          | Original                                | 
+| Website          | Link                                | 
 | --------         |----------                               |
 | Box Shadow Editor       | [live](https://angry-raman-b3b00b.netlify.com)  | 
 | Simple Checklist | [live](https://suspicious-hoover-6de470.netlify.com)  | 
