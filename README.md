@@ -14,4 +14,5 @@
 | Quote Generator | [live](https://suspicious-lumiere-8a855a.netlify.com/)  | 
 | DOM Array | [live](https://codepen.io/ZeroineX/full/poJqwmM)  | 
 | PokeDex | [live](https://pokedexclonne.netlify.com/)  | 
+| Speed Typing Game | [live](https://laughing-babbage-3c01c0.netlify.com/)  | 
 
