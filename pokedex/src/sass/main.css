@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a8c0ff), to(#3f2b96));
+  background-image: linear-gradient(to right, #a8c0ff, #3f2b96);
+  overflow-x: hidden;
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.deck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.btn {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+.btn span {
+  border: 3px solid #fde777;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+}
+
+.card {
+  width: 20rem;
+  margin: 1rem;
+  height: 25rem;
+  background: #fff;
+  color: #333;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.5rem 1rem #333;
+          box-shadow: 0 0.5rem 1rem #333;
+  position: relative;
+}
+
+.card .bg {
+  z-index: 1;
+  background: #dbd6ff;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 10px;
+}
+
+.card__photo {
+  padding: 1.5rem 0;
+  position: relative;
+  height: 50%;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.card__img {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+.card__body {
+  height: 50%;
+  padding: 1rem;
+}
+
+.card__name {
+  line-height: 0.2;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin: 4px 0;
+}
+
+.card__name::first-letter {
+  text-transform: uppercase;
+}
+
+.card__type {
+  color: #666;
+  font-size: 15px;
+}
+
+.card__level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #3f2b96;
+}
+
+.card:active, .card:focus {
+  background: #fbf7b2;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+/*# sourceMappingURL=main.css.map */
