@@ -15,4 +15,5 @@
 | DOM Array | [live](https://codepen.io/ZeroineX/full/poJqwmM)  | 
 | PokeDex | [live](https://pokedexclonne.netlify.com/)  | 
 | Speed Typing Game | [live](https://laughing-babbage-3c01c0.netlify.com/)  | 
+| Password Generator | [live](https://mystifying-borg-2f2323.netlify.com/)  | 
 
