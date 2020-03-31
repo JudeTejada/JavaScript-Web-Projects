@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/sass/main.css">
+  <script src="src/app.js" defer></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h1>Password Generator</h1>
+
+    <div class="result">
+      <div class="form-group">
+        <span id="newPassword" class="password"></span>
+        <button id="btn-copy">Copy</button>
+      </div>
+
+
+      <div class="form-group">
+        <label for="number">Character Amount</label>
+        <input type="number" name="Character Amount" id="length">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="lengthCheck">Include Uppercase</label>
+        <input type="checkbox" name="Uppercase" id="uppercaseCheck">
+      </div>
+
+      <div class="form-group">
+        <label for="lowercaseCheck">Include Lowerrcase</label>
+        <input type="checkbox" name="Lowercase" id="lowercaseCheck">
+      </div>
+
+      <div class="form-group">
+        <label for="numberCheck">Include Numbers</label>
+        <input type="checkbox" name="number" id="numberCheck">
+      </div>
+
+      <div class="form-group">
+        <label for="symbolCheck">Include Symbols</label>
+        <input type="checkbox" name="Symbols" id="symbolCheck">
+      </div>
+
+      <button id="btn-generate" class="btn center">Generate</button>
+    </div>
+  </div>
+</body>
+
+</html>

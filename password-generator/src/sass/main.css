@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #e9e9e9;
+  color: #333;
+  font-family: "Roboto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#length {
+  background: transparent;
+  border: 1px solid #333;
+}
+
+.wrapper {
+  border: 2px solid #000;
+  max-width: 100%;
+  padding: 5rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2.7rem;
+  margin: 2rem 0;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-right: 4rem;
+}
+
+button {
+  margin: 3rem 0;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid #333;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.center {
+  width: 100%;
+}
+
+.password {
+  word-wrap: break-word;
+  border: 1px solid #333;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */
