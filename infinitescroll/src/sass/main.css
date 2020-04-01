@@ -143,4 +143,23 @@ circle {
   opacity: 1;
   visibility: visible;
 }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+  .wrapper {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+  .post {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
