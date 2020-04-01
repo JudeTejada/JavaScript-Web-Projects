@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scroll Blog</title>
+  <link rel="stylesheet" href="src/sass/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="main">
+      <h1>Welcome To my blog</h1>
+      <input type="text" id="search">
+    </div>
+    <div id="posts">
+
+    </div>
+
+    <div class="loader" id="loader">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20"></circle>
+      </svg>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>

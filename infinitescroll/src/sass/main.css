@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f7f7f7;
+  color: #121212;
+  width: 100%;
+  height: 100vh;
+}
+
+input {
+  margin: 1.2rem;
+  padding: 0.5rem 3rem;
+}
+
+.main {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 3rem;
+}
+
+.main h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.post {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.post .title {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.post .id {
+  color: #333;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.post .body {
+  color: #444;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 3rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+svg {
+  width: 3.75em;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+circle {
+  text-align: center;
+  fill: none;
+  stroke: #fc2f70;
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=main.css.map */
