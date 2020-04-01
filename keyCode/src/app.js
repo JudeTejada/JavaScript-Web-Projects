@@ -42,7 +42,7 @@ const getKey = e => {
   container.innerHTML = root;
 };
 
-const addStatus = () => {
+const addStatus = e => {
   const p = document.createElement("p");
   p.className = "status";
   p.innerText = "Text Copied To Clipboard 👍";
@@ -55,7 +55,7 @@ const addStatus = () => {
 
 window.addEventListener("keydown", getKey);
 
-document.body.addEventListener("click", e => {
+container.addEventListener("click", e => {
   const textarea = document.createElement("textarea");
   const value = e.target.innerText;
 
