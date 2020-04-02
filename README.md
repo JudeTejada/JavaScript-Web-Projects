@@ -18,5 +18,5 @@
 | Password Generator | [live](https://mystifying-borg-2f2323.netlify.com/)  | 
 | eventKeyCode | [live](https://priceless-mcnulty-559fdc.netlify.com/)  | 
 | Infinite blog| [live](https://reverent-benz-144353.netlify.com/)  | 
-
+|Theme Toggler| [live](https://quizzical-colden-775d35.netlify.com/)  | 
 
