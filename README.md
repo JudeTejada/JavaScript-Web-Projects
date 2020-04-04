@@ -1,5 +1,6 @@
 ## JavaScript-Web-Projects
 
+This contains all the projects I've made building Plain JavaScript
 
 | Website          | Link                                | 
 | --------         |----------                               |
