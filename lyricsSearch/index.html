@@ -10,11 +10,30 @@
 
 <body>
   <div class="wrapper">
-    <h1>Type Any Songs</h1>
-    <input type="text" name="Search a song" id="searchSong">
+    <div class="hero">
+      <h1 class="hero__title"> 🎵 Search for a Song 🎵 </h1>
+      <input type="text" name="Search a song" id="searchSong" placeholder="Type a Song" class="hero__search" autofocus>
+    </div>
 
-    <div class="result" id="songs"></div>
+    <div class="balls hide" id="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="result" id="songs">
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
   </div>
+
 
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
