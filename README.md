@@ -20,4 +20,4 @@ This contains all the projects I've made building Plain JavaScript
 | eventKeyCode | [live](https://priceless-mcnulty-559fdc.netlify.com/)  | 
 | Infinite blog| [live](https://reverent-benz-144353.netlify.com/)  | 
 |Theme Toggler| [live](https://quizzical-colden-775d35.netlify.com/)  | 
-
+|Lyrics Search| [live](https://gallant-jang-863e66.netlify.com/)  | 
