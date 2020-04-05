@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+%btn {
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: none;
+}
+%status {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: #fff;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.red {
+  @extend %status;
+  background: red;
+}
+.green {
+  @extend %status;
+  background: green;
+}
+
+body {
+  background: #dddddd;
+  width: 100%;
+  height: 100vh;
+  font-family: "Fira Sans", sans-serif;
+
+  display: grid;
+  place-items: center;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
+form {
+  border-radius: 15px;
+  background: #474546;
+  padding: 5rem 2rem;
+}
+
+input {
+  display: flex;
+  background: #f7f7f7;
+  border: 1px solid #333;
+  border-radius: 10px;
+
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+  padding: 1rem;
+  width: 100%;
+}
+button {
+  font-family: inherit;
+}
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  grid-template-rows: repeat(4, 1fr);
+}
+.btn {
+  @extend %btn;
+
+  &:last-child {
+    grid-column: 2 / span 2;
+  }
+}
+
+.btn__yellow {
+  @extend %btn;
+}
+.btn__red {
+  @extend %btn;
+}
+.btn__green {
+  @extend %btn;
+  grid-row: span 2;
+}
