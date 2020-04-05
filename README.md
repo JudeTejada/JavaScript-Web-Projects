@@ -21,3 +21,4 @@ This contains all the projects I've made building Plain JavaScript
 | Infinite blog| [live](https://reverent-benz-144353.netlify.com/)  | 
 |Theme Toggler| [live](https://quizzical-colden-775d35.netlify.com/)  | 
 |Lyrics Search| [live](https://gallant-jang-863e66.netlify.com/)  | 
+|Pin Pad| [live](https://fervent-jackson-efcd83.netlify.com/)  | 
