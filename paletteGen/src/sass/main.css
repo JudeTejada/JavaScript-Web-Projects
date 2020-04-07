@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Muli", sans-serif;
+}
+
+.palette {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  position: relative;
+}
+
+.color {
+  position: relative;
+  height: 100vh;
+  -webkit-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+
+.detail {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: #fcfcfc;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+}
+
+.hexValue {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=main.css.map */
