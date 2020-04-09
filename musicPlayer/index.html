@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="src/sass/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="image">
+      <img src="src/assets/photo/music1.jpg" alt="Song 1 album" id="songCover">
+    </div>
+    <audio src="src/assets/music/music1.mp3" id="audio"></audio>
+    <div class="content">
+      <h2 class="title" id="songTitle">Song Title</h2>
+      <div class="controls">
+        <button id="prevSong">
+          <img src="src/assets/Pre.png" alt="PrevSong">
+        </button>
+        <button id="playOrPause" class="btnBig pause">
+          <img src="src/assets/Play.png" alt="Pause Icon" id="playOrPauseIcon">
+        </button>
+        <button id="nextSong">
+          <img src="src/assets/Next.png" alt="nextSong icon">
+        </button>
+      </div>
+    </div>
+    <div id="progress-container" class="progress-container">
+      <div id="progress" class="progress"></div>
+    </div>
+    <div class="controlsBottom">
+      <button id="songStatus" class="loud">Loud</button>
+
+      <div class="volume">
+        <button id="decreaseVolume">-</button>
+        <button id="increaseVolume">+</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/app.js" defer></script>
+</body>
+
+</html>
