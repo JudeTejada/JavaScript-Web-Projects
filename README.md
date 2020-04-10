@@ -23,4 +23,5 @@ This contains all the projects I've made building Plain JavaScript
 |Lyrics Search| [live](https://gallant-jang-863e66.netlify.com/)  | 
 |Pin Pad| [live](https://fervent-jackson-efcd83.netlify.com/)  | 
 |Simple Palette Generator [live](https://compassionate-visvesvaraya-2208dd.netlify.com/)  | 
-|Simple Palette Generator [live](https://adoring-wescoff-60a774.netlify.com/)  | 
+|Tip Calculator [live](https://adoring-wescoff-60a774.netlify.com/)  | 
+|Drumpad [live](https://adoring-dubinsky-a74658.netlify.com/)  | 
