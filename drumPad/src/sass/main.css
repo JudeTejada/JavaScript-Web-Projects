@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #121212;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.keys {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.keys .key {
+  width: 10rem;
+  height: 10rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.keys .key:nth-child(1) {
+  background: #ff6961;
+}
+
+.keys .key:nth-child(2) {
+  background: #ff6961;
+}
+
+.keys .key:nth-child(3) {
+  background: #ff6961;
+}
+
+.keys .key:nth-child(4) {
+  background: #aec6cf;
+}
+
+.keys .key:nth-child(5) {
+  background: #aec6cf;
+}
+
+.keys .key:nth-child(6) {
+  background: #ffb347;
+}
+
+.keys .key:nth-child(7) {
+  background: #34a4a8;
+}
+
+.keys .key:nth-child(8) {
+  background: #34a4a8;
+}
+
+.keys .key:nth-child(9) {
+  background: #ffb347;
+}
+
+.keys .key .center {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.keys .playing {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
