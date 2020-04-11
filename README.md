@@ -25,3 +25,4 @@ This contains all the projects I've made building Plain JavaScript
 |Simple Palette Generator| [live](https://compassionate-visvesvaraya-2208dd.netlify.com/)  | 
 |Tip Calculator | [live](https://adoring-wescoff-60a774.netlify.com/)  | 
 |Drumpad | [live](https://adoring-dubinsky-a74658.netlify.com/)  | 
+|JavaScript Clock| [live](https://kind-goldberg-4d1e0c.netlify.com/)  | 
