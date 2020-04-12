@@ -1,6 +1,7 @@
 ## JavaScript-Web-Projects
 
-This contains all the projects I've made building Plain JavaScript
+This contains all the projects that you can make with using plain JavaScript
+Some of this projects are from other people and to purpose of this was to test my knowledge in JavaScript
 
 | Website          | Link                                | 
 | --------         |----------                               |
