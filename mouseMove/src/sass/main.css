@@ -1,0 +1,53 @@
+html {
+  color: black;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Montseratt", sans-serif;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+}
+
+h1 {
+  text-shadow: 10px 10px 0 black;
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  mix-blend-mode: lighten;
+}
+
+.boxes {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.boxes .box {
+  width: 30rem;
+  height: 30rem;
+  border: 3px solid #333;
+}
+/*# sourceMappingURL=main.css.map */

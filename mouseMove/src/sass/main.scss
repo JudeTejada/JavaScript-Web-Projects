@@ -1,0 +1,45 @@
+html {
+  color: black;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Montseratt", sans-serif;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+h1 {
+  text-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  mix-blend-mode: lighten;
+}
+
+.boxes {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  width: 100%;
+  height: 100vh;
+
+  .box {
+    width: 30rem;
+    height: 30rem;
+    border: 3px solid #333;
+  }
+}
