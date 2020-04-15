@@ -28,3 +28,4 @@ Some of this projects are from other people and to purpose of this was to test m
 |Drumpad | [live](https://adoring-dubinsky-a74658.netlify.com/)  | 
 |JavaScript Clock| [live](https://kind-goldberg-4d1e0c.netlify.com/)  | 
 |Mouse Move fx| [live](https://confident-wescoff-e79138.netlify.com/)  |
+|Digital Clock| [live](https://brave-yalow-b8f9ca.netlify.com/)  |
