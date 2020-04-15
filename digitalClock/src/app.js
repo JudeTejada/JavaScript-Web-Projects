@@ -8,8 +8,6 @@ function setTime() {
   hours = hours ? hours : 12;
   minute = minute < 10 ? "0" + minute : minute;
 
-  const digitalTime = `${hours} : ${minute} : ${ampm}`;
-
   document.querySelector(".clock").innerHTML = `
  <h1>${hours} : ${minute} <span>${ampm}</span></h1>
  `;
