@@ -18,7 +18,7 @@ const convertRate = () => {
     .get(
       `https://prime.exchangerate-api.com/v5/8285591c17ad2b4dc8ca4a6a/latest/${currencyOne.value}`
     )
-    .then(res => {
+    .then((res) => {
       //gets the rate of the currencyTwo
       const rate = res.data.conversion_rates[currency_two];
 
@@ -38,7 +38,7 @@ currencyTwo.addEventListener("change", debounce(convertRate, 600));
 
 amountOne.addEventListener("input", debounce(convertRate, 600));
 
-const setConversionOnOtherCurrency = data => {
+const setConversionOnOtherCurrency = (data) => {
   //calculate the conversion
   const php = (amountOne.value * data.conversion_rates["USD"]).toFixed(2);
   const cad = (amountOne.value * data.conversion_rates["CAD"]).toFixed(2);
@@ -53,21 +53,21 @@ const setConversionOnOtherCurrency = data => {
         </li>
         
         <li>
-        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${cad} USD</strong></span>
+        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${cad} CAD</strong></span>
         </li>
 
         <li>
-        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${jpy} USD</strong></span>
-
-        </li>
-
-        <li>
-        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${krw} USD</strong></span>
+        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${jpy} JPY</strong></span>
 
         </li>
 
         <li>
-        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${eur} USD</strong></span>
+        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${krw} KRW</strong></span>
+
+        </li>
+
+        <li>
+        <span class="lighten"> ${amountOne.value} ${currencyOne.value}</span> = <span><strong>${eur} EUR</strong></span>
 
         </li>
     </ul>
