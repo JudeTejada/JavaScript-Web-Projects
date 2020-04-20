@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="src/sass/main.css">
+</head>
+
+<body>
+  <div class="newsletter">
+    <h2 class="newsletter__heading">Sign up to get free membership online exclusively</h2>
+    <p class="newsletter__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus cupiditate ea sed
+      cum molestias ullam ratione. Quo est magnam, numquam maxime veniam cum inventore, assumenda aspernatur earum in
+      tempore eos.</p>
+    <p class="error-message hide">Please Enter your email</p>
+    <input type="text" name="Label" id="email" placeholder"Enter your Email" />
+
+    <button id="btn-submit">submit</button>
+  </div>
+  <div class="overlay hide">
+    <div class="modal">
+      <div class="popup-1">
+        <h2>Hold Tight, Blasting you Off</h2>
+        <svg viewBox="25 25 50 50">
+          <circle cx="50" cy="50" r="20"></circle>
+        </svg>
+      </div>
+      <!--  Hide by Default  -->
+      <div class="popup-2 hide">
+        <h2>Horay, You're Signed in!</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit maxime animi ipsa dolorem cupiditate
+          perspiciatis asperiores temporibus tenetur nostrum nemo!</p>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+</body>
+
+</html>

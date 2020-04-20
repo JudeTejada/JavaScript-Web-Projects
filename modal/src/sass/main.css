@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 466px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "Source Sans Pro", sans-serif;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+}
+
+.newsletter {
+  background: #f7e05f;
+  padding: 5em;
+  max-width: 60%;
+  color: #0d0e0e;
+}
+
+@media (max-width: 900px) {
+  .newsletter {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 466px) {
+  .newsletter {
+    padding: 3em;
+  }
+}
+
+.newsletter__heading {
+  line-height: 1;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 466px) {
+  .newsletter__heading {
+    line-height: 1.2;
+    font-size: 2.8rem;
+  }
+}
+
+.newsletter__paragraph {
+  font-size: 1.6rem;
+  margin: 2em 0;
+  line-height: 1.6;
+}
+
+.newsletter input {
+  padding: 1.7em;
+  width: 50%;
+  border: none;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  .newsletter input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 466px) {
+  .newsletter input {
+    padding: 0.8em;
+  }
+}
+
+.newsletter button {
+  color: #fff;
+  font-size: 1.8rem;
+  border: none;
+  text-transform: uppercase;
+  background: #0d0e0e;
+  padding: 1em 3em;
+  -webkit-box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 14px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  margin-left: 1.5em;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .newsletter button {
+    width: 100%;
+    margin: 0;
+    margin-top: 1.2em;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #1a27c9;
+  padding: 5em;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 80%;
+    padding: 3em;
+  }
+}
+
+.modal .popup-1 {
+  text-align: center;
+}
+
+.modal h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
+
+.modal p {
+  font-size: 1.8em;
+  line-height: 1.6;
+}
+
+.hide {
+  display: none;
+}
+
+svg {
+  width: 3.75em;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke: #f7e05f;
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
