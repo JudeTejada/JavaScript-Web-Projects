@@ -2,9 +2,9 @@ const input = document.getElementById("searchField");
 const result = document.querySelector(".result");
 const btnSearch = document.getElementById("btn-search");
 const btnGenerateRandom = document.getElementById("btn-random");
-const API = "AcOTVrOFLmiZSTUqF_nLdWBpCsqx_c65fnPOZj9PwHg";
+const API = "PzB5c1b2uV4yKZh4c_kUO5b8qDdw0wsEz3m_y9wTbLg";
 
-let page = 0;
+let page = 1;
 
 async function fetchPhoto() {
   let queryInput = input.value;
@@ -21,7 +21,6 @@ async function fetchPhoto() {
 
 //fetch photo by search  type of photo
 async function fetchPhotoByQuery(url, query) {
-  page++;
   const response = await axios.get(
     `${url}?client_id=${API}&query=${query}&page=${page}`
   );
@@ -31,7 +30,18 @@ async function fetchPhotoByQuery(url, query) {
 //fetch a random photo on the API
 async function fetchRandomPhoto(url) {
   const response = await axios.get(`${url}?client_id=${API}&count=10`);
-  generatePhoto(response.data);
+  generateRandomPhoto(response.data);
+}
+
+//generate a gallery of random photos
+function generateRandomPhoto(data) {
+  result.innerHTML = `
+  <div class="gallery">
+  ${data.map((data) => templatePhoto(data)).join("")}
+  </div>
+  <button class="btnLoad"
+  data-query="${data.map((desc) => desc.alt_description)}">Load More</button>
+  `;
 }
 
 //generate a gallery of photo
@@ -39,25 +49,46 @@ function generatePhoto(data) {
   //loop thruough over and add photo
   result.innerHTML = ` 
   <div class="gallery">
-    ${data.map((data) => template(data)).join("")}
+    ${data.map((data) => templatePhoto(data)).join("")}
   </div>
-  <button class="btnLoad" onclick="loadMorePhoto()" 
+  <button class="btnLoad"
   data-query="${data.map((data) =>
     data.tags.map((tags) => tags.title)
   )}">Load More</button>
   `;
 }
-
-function loadMorePhoto() {
-  const query = input.value;
-  console.log(query);
+//load the photos  from tags
+function loadPhotoFromTags(tag) {
+  tag.map((data) => {
+    //create a div
+    const photoEl = document.createElement("div");
+    //add a classname
+    photoEl.classList.add("gallery-pic");
+    // generate template for each div
+    photoEl.innerHTML = `${templatePhoto(data)}`;
+    //apend photo to gallery
+    document.querySelector(".gallery").appendChild(photoEl);
+  });
 }
+//fetch photo from the tags inside of btn
+async function fetchPhotoFromTags(tags) {
+  //convert to array
+  const querytags = tags.split(",");
+
+  page++;
+  const response = await axios.get(
+    `https://api.unsplash.com/search/photos/?client_id=${API}&query=${querytags[0]}&page=${page}`
+  );
+
+  loadPhotoFromTags(response.data.results);
+}
+//clears the value
 function clearField(elm) {
   elm.value = "";
 }
 
 //template of photo
-function template(data) {
+function templatePhoto(data) {
   console.log(data);
   const template = `
   <a href="${data.urls.regular}" target="_blank">
@@ -71,5 +102,15 @@ function template(data) {
   return template;
 }
 
+// LISTENERS
 btnGenerateRandom.addEventListener("click", fetchPhoto);
 btnSearch.addEventListener("click", fetchPhoto);
+result.addEventListener("click", (e) => {
+  const clickedEl = e.target;
+  // check if btn that was clicked was a btn
+  if (clickedEl.tagName === "BUTTON") {
+    const tags = clickedEl.getAttribute("data-query");
+
+    fetchPhotoFromTags(tags);
+  }
+});
