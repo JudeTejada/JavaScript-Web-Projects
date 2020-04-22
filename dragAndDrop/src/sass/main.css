@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.ul {
+  list-style: none;
+  border: 1px solid #333;
+}
+
+.ul__title {
+  font-size: 3.5rem;
+  padding: 0.5em 2em;
+  border: 2px solid #111;
+}
+
+.ul__item {
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 2rem;
+  padding: 0.5em;
+  cursor: d;
+}
+
+.ul__item .draggable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1em;
+}
+
+.ul__item.isDragging {
+  opacity: 0.5;
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
