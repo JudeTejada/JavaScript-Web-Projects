@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  max-width: 110rem;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+nav {
+  padding: 2em 3em;
+  margin-bottom: 4em;
+  .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .categories {
+    display: flex;
+    padding-top: 1em;
+
+    li {
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.4rem;
+  grid-row-gap: 3rem;
+}
+
+.heading--2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+.card {
+  width: 25rem;
+
+  &__photo img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+  &__content {
+    padding-top: 1.2rem;
+  }
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+    &:hover {
+      color: #7399c5;
+    }
+  }
+}
