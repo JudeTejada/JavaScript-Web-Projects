@@ -33,3 +33,4 @@ Some of this projects are from other people and to purpose of this was to test m
 |Modal | [live](https://thirsty-knuth-72831e.netlify.app/)  |
 |HTML tabs| [live](https://nostalgic-rosalind-8c1178.netlify.app)  |
 |DragAndDrop| [live](https://dreamy-nobel-409bbf.netlify.app/)  |
+|News Aggregator| [live](https://blissful-elion-74751d.netlify.app/)  |
