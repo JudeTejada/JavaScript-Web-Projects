@@ -9,6 +9,13 @@
 }
 html {
   font-size: 62.5%;
+
+  @media (max-width: 1000px) {
+    font-size: 50%;
+  }
+  @media (max-width: 500px) {
+    font-size: 40%;
+  }
 }
 
 body {
@@ -33,7 +40,12 @@ ul {
 }
 nav {
   padding: 2em 3em;
-  margin-bottom: 4em;
+  margin-bottom: 1.5em;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
   .top-header {
     display: flex;
     align-items: center;
@@ -47,14 +59,81 @@ nav {
       font-size: 1.3rem;
       font-weight: 300;
       text-transform: uppercase;
+      cursor: pointer;
 
       &:not(:last-child) {
         margin-right: 1.5em;
       }
     }
   }
+  #countries {
+    text-transform: uppercase;
+  }
 }
+.header {
+  width: 100%;
 
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-areas:
+    "m t"
+    "m b";
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "m"
+      "t"
+      "b";
+    grid-template-rows: 0.5fr;
+    height: 100%;
+  }
+  &__article:nth-child(1) {
+    grid-area: m;
+
+    figcaption {
+      font-size: 5rem;
+
+      @media (max-width: 600px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__article:nth-child(2) {
+    grid-area: t;
+  }
+
+  &__article:nth-child(3) {
+    grid-area: b;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.55);
+  }
+  &__article {
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.6rem;
+    padding: 0.5em 1em;
+
+    @media (max-width: 500px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -65,15 +144,16 @@ nav {
 .heading--2 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 .card {
-  width: 25rem;
-
+  width: 100%;
+  padding: 1em;
   &__photo img {
     width: 100%;
     height: 20rem;
     object-fit: cover;
+    filter: brightness(0.55);
   }
   &__content {
     padding-top: 1.2rem;

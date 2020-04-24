@@ -2,18 +2,22 @@
 const queryByCounty = document.querySelector("#countries");
 const articlesContainer = document.querySelector("#articles");
 const categories = document.querySelectorAll(".newsCategories");
-
+const header = document.querySelector("#hero-content");
 // API
 const API = "596efbaf32f548faa75b18be8581bca0";
 let url = "http://newsapi.org/v2/top-headlines?";
 
+const fetchHeroArticles = async () => {
+  const response = await axios.get(`${url}country=us&apiKey=${API}&pageSize=3`);
+
+  return await response.data.articles;
+};
 //send request api
 const fetchArticles = async () => {
   const response = await axios.get(
     `${url}country=${queryByCounty.value}&apiKey=${API}&pageSize=8`
   );
-
-  return response.data.articles;
+  return await response.data.articles;
 };
 
 const fetchArticleByCategory = async (e) => {
@@ -36,7 +40,7 @@ const displayLatestArticles = (articles) => {
   articlesContainer.innerHTML = `
     <h2 class="heading--2">Latest Articles</h2>
       <div class="grid">
-        ${articles.map((data) => templateArticle(data)).join("")}
+        ${articles.map((data) => templateArticleCard(data)).join("")}
       </div>
   `;
 };
@@ -46,12 +50,30 @@ const displayCategoryArticles = (articles, category) => {
   articlesContainer.innerHTML = `
     <h2 class="heading--2">${category}</h2>
       <div class="grid">
-        ${articles.map((data) => templateArticle(data)).join("")}
+        ${articles.map((data) => templateArticleCard(data)).join("")}
       </div>
   `;
 };
+//display the top 3 articles
+const displayHeroArticles = async () => {
+  const data = await fetchHeroArticles();
 
-const templateArticle = (data) => {
+  header.innerHTML = `
+  ${data.map((article) => templateArticleHero(article)).join("")};
+  `;
+};
+
+const templateArticleHero = (data) => {
+  const article = `
+    <figure class="header__article">
+    <img src="${data.urlToImage}" />
+    <figcaption>${data.title}</figcaption>
+    </figure>
+  `;
+
+  return article;
+};
+const templateArticleCard = (data) => {
   const article = `
   <div class="card">
     <div class="card__photo">
@@ -68,7 +90,7 @@ const templateArticle = (data) => {
 
   return article;
 };
-
+displayHeroArticles();
 searchArticleByCountry();
 queryByCounty.addEventListener("change", searchArticleByCountry);
 

@@ -12,6 +12,18 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -36,7 +48,13 @@ ul {
 
 nav {
   padding: 2em 3em;
-  margin-bottom: 4em;
+  margin-bottom: 1.5em;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
 }
 
 nav .top-header {
@@ -62,10 +80,97 @@ nav .categories li {
   font-size: 1.3rem;
   font-weight: 300;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 nav .categories li:not(:last-child) {
   margin-right: 1.5em;
+}
+
+nav #countries {
+  text-transform: uppercase;
+}
+
+.header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5fr;
+      grid-template-columns: 1fr 0.5fr;
+      grid-template-areas: "m t" "m b";
+}
+
+@media (max-width: 800px) {
+  .header {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "m" "t" "b";
+    -ms-grid-rows: 0.5fr;
+        grid-template-rows: 0.5fr;
+    height: 100%;
+  }
+}
+
+.header__article:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: m;
+}
+
+.header__article:nth-child(1) figcaption {
+  font-size: 5rem;
+}
+
+@media (max-width: 600px) {
+  .header__article:nth-child(1) figcaption {
+    font-size: 2rem;
+  }
+}
+
+.header__article:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: t;
+}
+
+.header__article:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+.header img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(0.55);
+          filter: brightness(0.55);
+}
+
+.header__article {
+  position: relative;
+}
+
+.header figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.6rem;
+  padding: 0.5em 1em;
+}
+
+@media (max-width: 500px) {
+  .header figcaption {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header figcaption {
+    font-size: 2rem;
+  }
 }
 
 .grid {
@@ -80,11 +185,12 @@ nav .categories li:not(:last-child) {
 .heading--2 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 .card {
-  width: 25rem;
+  width: 100%;
+  padding: 1em;
 }
 
 .card__photo img {
@@ -92,6 +198,8 @@ nav .categories li:not(:last-child) {
   height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: brightness(0.55);
+          filter: brightness(0.55);
 }
 
 .card__content {
