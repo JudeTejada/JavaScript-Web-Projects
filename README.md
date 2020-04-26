@@ -35,4 +35,5 @@ Some of this projects are from other people and to purpose of this was to test m
 |DragAndDrop| [live](https://dreamy-nobel-409bbf.netlify.app/)  |
 |News Aggregator| [live](https://blissful-elion-74751d.netlify.app/)  |
 |WeatherApp| [live](https://vigilant-almeida-302a0b.netlify.app/)  |
+|Github Profile| [live](https://findhub.netlify.app/  |
 
