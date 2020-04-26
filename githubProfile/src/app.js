@@ -86,7 +86,11 @@ const templateRepo = (repos) => {
   });
 
   //add all of the car
-  repositoriesCard.innerHTML = output;
+  repositoriesCard.innerHTML = `
+  <br>
+  <br>
+  <h2>Popular Repositories</h2>
+  ${output}`;
 };
 //if user is null
 function sendMessage(msg) {
