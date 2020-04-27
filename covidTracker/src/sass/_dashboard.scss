@@ -1,0 +1,17 @@
+.dashboard {
+  padding: 4em;
+  border-radius: 2rem;
+  background: #fff;
+  .card {
+    text-align: center;
+    font-size: 2.3rem;
+
+    p {
+      color: var(--lightgray);
+    }
+    &__number {
+      margin-top: 1.3em;
+      margin-bottom: 0.3em;
+    }
+  }
+}

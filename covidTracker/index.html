@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid19 Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="src/sass/main.css">
+
+
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="content">
+        <h1 class="heading--1">All you Need is to stay at home</h1>
+
+        <section class="dashboard grid">
+
+          <div class="counter card orange">
+            <i class="fas fa-virus"></i>
+            <h2 class="card__number" id="totalConfirmed">0</h2>
+            <p>Total Confirmed</p>
+          </div>
+
+          <div class="counter card red">
+            <i class="fas fa-virus"></i>
+            <h2 class="card__number" id="totalDeaths">0</h2>
+            <p>Total Deaths</p>
+          </div>
+
+          <div class="counter card green">
+            <i class="fas fa-virus"></i>
+            <h2 class="card__number" id="totalRecovered">0</h2>
+            <p>Total Recovered</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="symptoms">
+    <div class="container">
+      <h2 class="heading--2">Symptoms of the Virus</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="src/assets/images/caugh.png" alt="a person caughing">
+          <h3 class="heading--3">Headache</h3>
+        </div>
+
+        <div class="card">
+          <img src="src/assets/images/headache.png" alt="a person caughing">
+          <h3 class="heading--3">Cough</h3>
+        </div>
+
+        <div class="card">
+          <img src="src/assets/images/fever.png" alt="a person caughing">
+          <h3 class="heading--3">Fever</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="prevention container">
+    <h2 class="heading--2">Prevention Tips</h2>
+
+    <div class="card flex">
+
+      <div class="card__photo">
+        <img src="src/assets/images/wear_mask.png" alt="Person wearing a mask">
+      </div>
+
+      <div class="card__description">
+        <h3 class="heading--3">Wear Face Mask</h3>
+        <p>Since the start of the coronavirus outbreak some places have fully embraced wearing face masks, and anyone
+          caught without one risks becoming a social pariah.</p>
+      </div>
+    </div>
+
+    <div class="card flex">
+
+      <div class="card__photo">
+        <img src="src/assets/images/wash_hands.png" alt="Person wearing a mask">
+      </div>
+
+      <div class="card__description">
+        <h3 class="heading--3">Wash your hands</h3>
+        <p>These diseases include gastrointestinal infections, such as Salmonella and respiratory infections, such as
+          influenza.</p>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section class="virusSpread container">
+    <div class="flex virusSpread__search">
+      <h2 class="heading--2">Search a country</h2>
+      <input type="text" name="search for a country" id="searchCountry" placeholder="Enter a country">
+    </div>
+    <section id="bottomDashboard">
+
+    </section>
+    </div>
+  </section>
+
+  <footer class="footer">Made by <a href="https://github.com/JudeTejada" target="_blank">Jude</a></footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="src/debouce.js"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>

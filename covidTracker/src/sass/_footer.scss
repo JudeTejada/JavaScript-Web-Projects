@@ -1,0 +1,16 @@
+.footer {
+  padding: 3em;
+  text-align: center;
+  font-size: 1.6rem;
+  background: var(--primary);
+  color: #fff;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.prevention {
+  padding: 2em 0;
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  .card {
+    padding: 3em;
+    background: var(--card);
+    border-radius: 20px;
+
+    margin-bottom: 3em;
+    &__description {
+      max-width: 60%;
+
+      @media (max-width: 320px) {
+        max-width: 100%;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-top: 0.6em;
+        color: #555;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
