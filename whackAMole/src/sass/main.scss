@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  font-family: "Press Start 2P", cursive;
+}
+.wrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  z-index: 1;
+}
+nav {
+  padding: 2em 0;
+
+  text-align: center;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  .holes {
+    width: 100%;
+    height: 15rem;
+    border: 1px solid #333;
+    display: grid;
+    place-items: center;
+    font-size: 8rem;
+  }
+  .mole {
+    opacity: 0;
+  }
+  //if hole has a class of show
+  .holes.show .mole {
+    opacity: 1;
+  }
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  z-index: 10;
+
+  .modal {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #333;
+    background: #fff;
+    padding: 10em;
+    text-align: center;
+
+    &__desc {
+      margin: 1.2em 0;
+      margin-bottom: 3em;
+    }
+    &__btn {
+      border: none;
+      background: none;
+      background-color: #e76e55;
+      padding: 1em 3em;
+      border: 3px solid #333;
+    }
+  }
+}
+.hide {
+  display: none;
+}
