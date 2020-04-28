@@ -120,6 +120,10 @@ header .content {
   font-size: 3rem;
 }
 
+.center {
+  text-align: center;
+}
+
 .dashboard {
   padding: 4em;
   border-radius: 2rem;
@@ -138,6 +142,11 @@ header .content {
 .dashboard .card__number {
   margin-top: 1.3em;
   margin-bottom: 0.3em;
+  letter-spacing: 2px;
+}
+
+#bottomDashboard .card {
+  margin-top: 1em;
 }
 
 .heading--1 {
@@ -322,6 +331,7 @@ circle {
 .footer a {
   text-decoration: none;
   color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .footer a:hover {

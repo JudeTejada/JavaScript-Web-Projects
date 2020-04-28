@@ -6,6 +6,7 @@ const totalDeaths = document.getElementById("totalDeaths"),
 const searchCountryInput = document.getElementById("searchCountry");
 const bottomDashboard = document.getElementById("bottomDashboard");
 
+const counter = document.querySelectorAll(".counter");
 //fetch total data of global
 const fetchGlobalData = async () => {
   const response = await axios.get("https://api.covid19api.com/summary");
@@ -13,17 +14,18 @@ const fetchGlobalData = async () => {
   return response.data;
 };
 //fetch data by a county
-const fetchSpecificCountry = async () => {
-  let inputValQuery = searchCountryInput.value;
+const fetchSpecificCountry = async (inputValQuery) => {
   const response = await axios.get(
-    `https://api.covid19api.com/live/country/${inputValQuery}`
+    `https://api.covid19api.com/total/country/${inputValQuery}`
   );
+
   return response.data;
 };
 
 const queryCountry = async () => {
+  let inputValQuery = searchCountryInput.value || "Philippines";
   displayLoader();
-  fetchSpecificCountry()
+  fetchSpecificCountry(inputValQuery)
     .then((data) => {
       const array = [];
       for (let i = 0; i < data.length; i++) {
@@ -38,21 +40,45 @@ const queryCountry = async () => {
 
 //DATA FOR TOTAL DATA OF  WORLD
 const templateDashboard = async () => {
+  const speed = 200;
   const data = await fetchGlobalData();
 
-  totalDeaths.textContent = data.Global.TotalDeaths;
-  totalRecovered.textContent = data.Global.TotalRecovered;
-  totalConfirmed.textContent = data.Global.TotalConfirmed;
+  totalDeaths.setAttribute("data", `${data.Global.TotalDeaths}`);
+  totalRecovered.setAttribute("data", `${data.Global.TotalRecovered}`);
+  totalConfirmed.setAttribute("data", `${data.Global.TotalConfirmed}`);
+
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data");
+      const count = +counter.innerText;
+
+      // Lower inc to slow and higher to slow
+      const inc = target / speed;
+      // Check if target is reached
+      if (count < target) {
+        // Add inc to count and output in counter
+        counter.innerText = Math.floor(count + inc);
+        // Call function every ms
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
 };
 //template for query a Country
 const countryDashboard = (country) => {
-  if (!country) {
-    sendError();
-    return;
-  }
+  console.log(country);
+  //if country is undefined
+  if (!country) return sendError();
+
   setTimeout(() => {
-    bottomDashboard.innerHTML = `
-    <div class="dashboard grid">
+    bottomDashboard.innerHTML = ` 
+    <div class="dashboard">
+    <h2 class="heading--2 center">${country.Country}</h2>
+    <div class="grid">
       <div class="card orange">
       <i class="fas fa-virus"></i>
       <h2 class="card__number" id="totalConfirmedCountry">${country.Confirmed}</h2>
@@ -71,7 +97,7 @@ const countryDashboard = (country) => {
       <p>Total Recovered</p>
     </div>
     </div>
-    
+</div>    
     `;
   }, 1500);
 };
@@ -95,4 +121,9 @@ const sendError = () => {
 };
 //init
 templateDashboard();
-searchCountryInput.addEventListener("keypress", debounce(queryCountry));
+queryCountry();
+searchCountryInput.addEventListener("input", debounce(queryCountry));
+
+// COUNTER
+const counters = document.querySelectorAll(".counter");
+const speed = 200; // The lower the slower

@@ -21,21 +21,21 @@
 
         <section class="dashboard grid">
 
-          <div class="counter card orange">
+          <div class="card orange">
             <i class="fas fa-virus"></i>
-            <h2 class="card__number" id="totalConfirmed">0</h2>
+            <h2 class="counter card__number" id="totalConfirmed"></h2>
             <p>Total Confirmed</p>
           </div>
 
-          <div class="counter card red">
+          <div class="card red">
             <i class="fas fa-virus"></i>
-            <h2 class="card__number" id="totalDeaths">0</h2>
+            <h2 class="counter card__number" id="totalDeaths"></h2>
             <p>Total Deaths</p>
           </div>
 
-          <div class="counter card green">
+          <div class="card green">
             <i class="fas fa-virus"></i>
-            <h2 class="card__number" id="totalRecovered">0</h2>
+            <h2 class="counter card__number" id="totalRecovered"></h2>
             <p>Total Recovered</p>
           </div>
         </section>
@@ -103,15 +103,21 @@
   <section class="virusSpread container">
     <div class="flex virusSpread__search">
       <h2 class="heading--2">Search a country</h2>
+
       <input type="text" name="search for a country" id="searchCountry" placeholder="Enter a country">
+
     </div>
     <section id="bottomDashboard">
-
+      <div class="message">
+        <span>For mobile phone press enter after typing out the value</span>
+      </div>
     </section>
     </div>
   </section>
 
-  <footer class="footer">Made by <a href="https://github.com/JudeTejada" target="_blank">Jude</a></footer>
+  <footer class="footer">
+    <h2>Made by <a href="https://github.com/JudeTejada" target="_blank">Jude</a></h2>
+  </footer>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>

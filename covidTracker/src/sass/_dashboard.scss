@@ -12,6 +12,13 @@
     &__number {
       margin-top: 1.3em;
       margin-bottom: 0.3em;
+      letter-spacing: 2px;
     }
+  }
+}
+
+#bottomDashboard {
+  .card {
+    margin-top: 1em;
   }
 }
