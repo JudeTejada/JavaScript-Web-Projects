@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickr Meal</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="src/sass/main.css">
+</head>
+
+<body>
+  <section id="randomMeal" class="topsection center">
+    <h1 class="heading--1">What Should I eat</h1>
+    <p class="topsection__desc" id="random-name">Pick A Dish</p>
+
+    <figure id="random-img" class="topsection__dish">
+      &nbsp;
+    </figure>
+    <button class="btn btn--random" id="btn-random">random meal</button>
+    <!-- Remain Empty -->
+    <div id="random-recipe">
+      &nbsp;
+    </div>
+    <div id="random-ingredients">
+      &nbsp;
+    </div>
+  </section>
+
+
+  <section id="addMeal" class="midsection center">
+    <h2 class="heading--2">Add A New Dish</h2>
+    <form id="form-meal">
+      <div class="form-group">
+        <input type="text" name="Meal Name" id="meal-name" placeholder="Meal Name" class="field">
+        <span class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="image url" id="meal-url" placeholder="Meal Url" class="field">
+        <span class="error"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="meal-recipe" cols="30" rows="10" class="field"></textarea>
+        <span class="error"></span>
+      </div>
+
+      <div class="from-group">
+        <textarea id="meal-ingredients" cols="30" rows="10" class="field"></textarea>
+        <span class="error"></span>
+      </div>
+      <button class="btn btn--add" id="btn-add">add dish</button>
+    </form>
+  </section>
+
+
+  <section id="myMeals" class="botsection">
+    <div class="container">
+      <div class="botsection__wrapper">
+        <h2 class="heading--2">My Meals</h2>
+        <button class="btn btn--clear" id="btn-clear">Clear All</button>
+      </div>
+      <div class="grid" id="myDishes">
+
+      </div>
+    </div>
+  </section>
+
+  <div class="popup-overlay" id="popup-overlay">
+    <div id="popup" class="popup center">
+      <button class="popup__closebtn" id="popup-closebtn">
+        <span class="material-icons">
+          close
+        </span></button>
+      <div class="popup__container">
+        <h2 class="popup__name" id="popup-meal"></h2>
+        <figure class="popup__dish" id="popup-photo"></figure>
+      </div>
+
+      <div class="flex">
+        <div class="popup__reccipe" id="popup-recipe">Recipe:</div>
+        <div class="popup__ingredients" id="popup-ingredients">Ingredients:</div>
+      </div>
+    </div>
+  </div>
+  <script src="src/JS/app.js" defer></script>
+</body>
+
+</html>

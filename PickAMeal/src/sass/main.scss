@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: "Merriweather", serif;
+}
+section {
+  height: 100%;
+  width: 100%;
+
+  &:nth-child(3) {
+    background: #eee;
+  }
+}
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: block;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/*---------- TOP SECTION -------------*/
+
+.topsection {
+  &__dish {
+    background-image: url("https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/eggs-breakfast-avocado-1296x728-header.jpg?w=1155&h=1528");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 35vw;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}
+/*---------- MID SECTION -------------*/
+
+/*---------- BOTTOM SECTION -------------*/
+.botsection {
+  background: #eee;
+  &__wrapper {
+    text-align: center;
+  }
+}
+
+.card {
+  padding: 1em;
+  background: #fff;
+
+  &__img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+
+.flex {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0 0.4em;
+  width: 100%;
+}
+.popup-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  .popup {
+    padding: 10em 5em;
+    background: #fff;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    place-items: center;
+    &__name {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    &__dish {
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 40vh;
+      width: 35vw;
+      margin: 1em auto;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+    &__subtitle {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 0.6em;
+      border-bottom: 1px solid #333;
+    }
+
+    &__closebtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1em;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
