@@ -19,7 +19,7 @@
     </figure>
     <button class="btn btn--random" id="btn-random">random meal</button>
     <!-- Remain Empty -->
-    <div id="random-recipe">
+    <div id="random-recipe" class="topsection">
       &nbsp;
     </div>
     <div id="random-ingredients">
@@ -27,32 +27,34 @@
     </div>
   </section>
 
+  <div class="wrapper">
+    <section id="addMeal" class="midsection center">
 
-  <section id="addMeal" class="midsection center">
-    <h2 class="heading--2">Add A New Dish</h2>
-    <form id="form-meal">
-      <div class="form-group">
-        <input type="text" name="Meal Name" id="meal-name" placeholder="Meal Name" class="field">
-        <span class="error"></span>
-      </div>
+      <h2 class="heading--2">Add A New Dish</h2>
+      <form id="form-meal">
+        <div class="form-group">
+          <input type="text" name="Meal Name" id="meal-name" placeholder="Meal Name" class="field">
+          <span class="error"></span>
+        </div>
 
-      <div class="form-group">
-        <input type="text" name="image url" id="meal-url" placeholder="Meal Url" class="field">
-        <span class="error"></span>
-      </div>
-      <div class="form-group">
-        <textarea id="meal-recipe" cols="30" rows="10" class="field"></textarea>
-        <span class="error"></span>
-      </div>
+        <div class="form-group">
+          <input type="text" name="image url" id="meal-url" placeholder="Meal Url" class="field">
+          <span class="error"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="meal-recipe" cols="30" rows="10" class="field"></textarea>
+          <span class="error"></span>
+        </div>
 
-      <div class="from-group">
-        <textarea id="meal-ingredients" cols="30" rows="10" class="field"></textarea>
-        <span class="error"></span>
-      </div>
-      <button class="btn btn--add" id="btn-add">add dish</button>
-    </form>
-  </section>
+        <div class="from-group">
+          <textarea id="meal-ingredients" cols="30" rows="10" class="field"></textarea>
+          <span class="error"></span>
+        </div>
+        <button class="btn btn--add" id="btn-add">add dish</button>
+      </form>
 
+    </section>
+  </div>
 
   <section id="myMeals" class="botsection">
     <div class="container">

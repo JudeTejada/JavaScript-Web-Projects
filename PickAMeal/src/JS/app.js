@@ -133,8 +133,6 @@ const templateRandomDish = (data) => {
   //Display content
   randomImg.style.backgroundImage = `url(${data.url})`;
   randomName.textContent = data.name;
-  randomIngredients.textContent = data.recipe;
-  randomRecipe.textContent = data.ingredients;
 
   randomImg.addEventListener("click", () => {
     createPopup(data);
@@ -209,3 +207,8 @@ const init = () => {
 
 init();
 // Photo Example https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ
+// CLEARING ALL MY DISHES AT ONCE AND RELOAD PAGE
+btnClear.addEventListener("click", () => {
+  localStorage.clear();
+  location.reload();
+});
