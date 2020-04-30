@@ -74,6 +74,13 @@ body {
   padding: 3em 2em;
 }
 
+#weather-timezone {
+  color: var(--headline);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
 .weather {
   display: -webkit-box;
   display: -ms-flexbox;
