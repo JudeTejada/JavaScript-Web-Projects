@@ -45,23 +45,26 @@ const fetchProfile = async (user) => {
 function addLoader() {
   profileCard.innerHTML = `
   <div class="container-loader">
-
     <div id="balls"></div>
   </div>
   `;
-  chartContent.innerHTML = `
-  <div class="container-loader">
-  <div id="balls"></div>
-</div>
 
-<div class="container-loader">
-<div id="balls"></div>
-</div>
-  `;
   repositoriesCard.innerHTML = `
   <div class="container-loader">
     <div id="balls"></div>
   </div>
+`;
+
+  chartContent.innerHTML = `
+  
+  <div class="container-loader">
+    <div id="balls"></div>
+  </div>
+
+  <div class="container-loader">
+    <div id="balls"></div>
+  </div>
+  
 `;
 }
 
@@ -89,16 +92,15 @@ const validateInput = () => {
 const templateChart = (repos) => {
   chartContent.innerHTML = `
 
-<div class="chart__languages">
-<h2 class="chart__title">Top Languages</h2>
-<canvas id="topLanguages"></canvas>
-</div>
-<div class="chart__mostStarred">
-<h2 class="chart__title">Most Starred</h2>
-<canvas id="mostStarred"></canvas>
-</div>
-
-
+      
+  <div class="chart__languages">
+  <h2 class="chart__title">Top Languages</h2>
+  <canvas id="topLanguages"></canvas>
+  </div>
+  <div class="chart__mostStarred">
+  <h2 class="chart__title">Most Starred</h2>
+  <canvas id="mostStarred"></canvas>
+  </div>
 
 `;
 
@@ -233,12 +235,14 @@ function sendMessage(msg) {
   </div>
 
   `;
+  chartContent.innerHTML = "";
 }
 
 //reset value
 function clearValues() {
   profileCard.innerHTML = "";
   repositoriesCard.innerHTML = "";
+  chartContent.innerHTML = "";
   searchInput.value = "";
 }
 
