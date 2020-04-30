@@ -183,6 +183,27 @@ nav input:checked + label::after {
   margin-right: 0.5em;
 }
 
+.chart {
+  margin-top: 2em;
+}
+
+.chart__languages, .chart__mostStarred {
+  padding: 3.5em;
+  background: var(--card);
+}
+
+@media (max-width: 930px) {
+  .chart__mostStarred {
+    margin-top: 2em;
+  }
+}
+
+.chart__title {
+  color: var(--heading);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
 .message {
   font-size: 2rem;
   width: 100%;
@@ -205,5 +226,59 @@ nav input:checked + label::after {
   --bg: #f8f8f8;
   --heading: #111;
   --paragraph: #333;
+}
+
+.container-loader {
+  margin-top: 3em;
+  background: var(--card);
+  padding: 10em;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#balls {
+  border: 3px solid rgba(61, 239, 255, 0.2);
+  border-top-color: #3cefff;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+@media (max-width: 930px) {
+  .grid {
+    display: block;
+  }
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */

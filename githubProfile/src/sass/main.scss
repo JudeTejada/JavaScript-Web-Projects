@@ -139,6 +139,26 @@ nav {
   }
 }
 
+.chart {
+  margin-top: 2em;
+  &__languages,
+  &__mostStarred {
+    padding: 3.5em;
+    background: var(--card);
+  }
+
+  &__mostStarred {
+    @media (max-width: 930px) {
+      margin-top: 2em;
+    }
+  }
+  &__title {
+    color: var(--heading);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
 .message {
   font-size: 2rem;
   width: 100%;
@@ -159,4 +179,42 @@ nav {
   --bg: #f8f8f8;
   --heading: #111;
   --paragraph: #333;
+}
+
+.container-loader {
+  margin-top: 3em;
+  background: var(--card);
+  padding: 10em;
+  display: grid;
+  justify-content: center;
+}
+
+#balls {
+  border: 3px solid hsla(185, 100%, 62%, 0.2);
+  border-top-color: #3cefff;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+
+  @media (max-width: 930px) {
+    display: block;
+  }
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
