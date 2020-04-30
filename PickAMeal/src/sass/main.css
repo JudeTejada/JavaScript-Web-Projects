@@ -197,6 +197,18 @@ form textarea {
      object-fit: cover;
 }
 
+.card__meal {
+  margin-top: 1em;
+  font-size: 1.8rem;
+}
+
+.card__btn {
+  background: #3f3d3d;
+  color: #fff;
+  font-family: inherit;
+  padding: 0.5em 1em;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;

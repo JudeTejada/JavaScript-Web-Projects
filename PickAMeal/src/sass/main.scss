@@ -169,6 +169,17 @@ form {
     height: 20rem;
     object-fit: cover;
   }
+
+  &__meal {
+    margin-top: 1em;
+    font-size: 1.8rem;
+  }
+  &__btn {
+    background: rgb(63, 61, 61);
+    color: #fff;
+    font-family: inherit;
+    padding: 0.5em 1em;
+  }
 }
 
 .flex {

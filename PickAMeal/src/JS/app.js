@@ -2,7 +2,7 @@
 
 // Button selectors
 const btnAdd = document.querySelector("#btn-add");
-const btnClear = document.querySelector("btn-clear");
+const btnClear = document.querySelector("#btn-clear");
 const btnRandom = document.querySelector("#btn-random");
 
 // TOP SELECTORS
@@ -65,6 +65,12 @@ const createUIDish = (dish) => {
   dishCard.classList.add("card");
   dishCard.innerHTML = `${templateCardDish(dish)}`;
 
+  //add A Listener
+  dishCard.addEventListener("click", (e) => {
+    if (e.target.className === "card__btn") {
+      createPopup(dish);
+    }
+  });
   myDishes.appendChild(dishCard);
 
   return dishCard;
@@ -157,6 +163,7 @@ mealForm.addEventListener("submit", (e) => {
   }
 });
 
+//generate a random Meal
 btnRandom.addEventListener("click", () => {
   //get dishes from LS
   const dishes = getDishesFromLS();
@@ -168,7 +175,7 @@ btnRandom.addEventListener("click", () => {
     randomName.innerHTML = `Please Create a Meal first`;
   }
 });
-//
+// Adding Meal
 btnAdd.addEventListener("click", () => {
   //check if each one has no value
   if (
@@ -183,7 +190,11 @@ btnAdd.addEventListener("click", () => {
     createNewDish();
   }
 });
-
+// removes all data from Local Storage
+btnClear.addEventListener("click", () => {
+  localStorage.clear();
+  location.reload();
+});
 popupClosebtn.addEventListener("click", () => {
   popup.style.display = "none";
 });
@@ -191,6 +202,7 @@ popupClosebtn.addEventListener("click", () => {
 const init = () => {
   const dishes = getDishesFromLS();
 
+  if (!dishes) return;
   dishes.forEach((dish) => {
     //get the dish and display
     const newDish = createUIDish(dish);
@@ -200,15 +212,11 @@ const init = () => {
       if (e.target.className === "card__btn") {
         createPopup(dish);
       }
+      allDishes.push(dish);
     });
-    allDishes.push(dish);
   });
 };
 
 init();
 // Photo Example https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ
 // CLEARING ALL MY DISHES AT ONCE AND RELOAD PAGE
-btnClear.addEventListener("click", () => {
-  localStorage.clear();
-  location.reload();
-});
