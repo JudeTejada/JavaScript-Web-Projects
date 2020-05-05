@@ -29,7 +29,7 @@ Some of this projects are from other people and to purpose of this was to test m
 |JavaScript Clock| [live](https://kind-goldberg-4d1e0c.netlify.com/)  | 
 |Mouse Move fx| [live](https://confident-wescoff-e79138.netlify.com/)  |
 |Digital Clock| [live](https://brave-yalow-b8f9ca.netlify.com/)  |
-|Photo Splash| [live](https://dreamy-golick-dcaaeb.netlify.app/)  |
+
 |Modal | [live](https://thirsty-knuth-72831e.netlify.app/)  |
 |HTML tabs| [live](https://nostalgic-rosalind-8c1178.netlify.app)  |
 |DragAndDrop| [live](https://dreamy-nobel-409bbf.netlify.app/)  |
